@@ -116,7 +116,7 @@ namespace bx
 #if BX_PLATFORM_ANDROID
 		struct mallinfo mi = mallinfo();
 		return mi.uordblks;
-#elif BX_PLATFORM_LINUX || BX_PLATFORM_HURD
+#elif BX_PLATFORM_LINUX || BX_PLATFORM_HURD || BX_PLATFORM_RPI
 		FILE* file = fopen("/proc/self/statm", "r");
 		if (NULL == file)
 		{
